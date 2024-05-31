@@ -65,14 +65,14 @@ right_outer_join_df.show()
 
 # COMMAND ----------
 
-#Left Anti Join
+#Left Anti Join - uncommon record fro left
 left_anti_join_df = df1.join(df2, df1.id == df2.id, "left_anti")
 print("Left Anti Join")
 left_anti_join_df.show()
 
 # COMMAND ----------
 
-#Left Semi Join
+#Left Semi Join - common record fro left
 left_semi_join_df = df1.join(df2, df1.id == df2.id, "left_semi")
 print("Left Semi Join")
 left_semi_join_df.show()
