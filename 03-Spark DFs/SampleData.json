@@ -1,0 +1,52 @@
+[
+    {
+        "Employee": [
+            {
+                "emp_id": 46066601,
+                "Designation": "Manager",
+                "attribute": [
+                    {
+                        "Parent_id": 46044403,
+                        "status_flg": 1,
+                        "Department": [
+                            {
+                                "Dept_id": 46044403,
+                                "Code": "ep",
+                                "dept_type": "MP",
+                                "dept_flag": 1
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Employee": [
+            {
+                "emp_id": 56555000,
+                "Designation": "Supervisor",
+                "attribute": [
+                    {
+                        "Parent_id": 5605501,
+                        "status_flg": 1,
+                        "Department": [
+                            {
+                                "Dept_id": 56044402,
+                                "Code": "ep",
+                                "dept_type": "P",
+                                "dept_flag": 1
+                            },
+                            {
+                                "Dept_id": 56044400,
+                                "Code": "fs",
+                                "dept_type": "D",
+                                "dept_flag": 0
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
