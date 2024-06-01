@@ -28,6 +28,13 @@ rdd3 = rdd2.map(lambda x: (x,1))
 
 rdd3.saveAsTextFile('/FileStore/tables/output/5partitionOutput')
 
+
+# Repartition
+# Function repartition is used to increase or decrease partitions in Spark
+# Repartition always shuffles the data and build new partitions from scratch
+# Repartition results in almost equal sized partitions.
+# Due to full shuffle, it is not good for performance in some use cases. But as it creates equal sized partitions, good for performance in some use cases.
+
 # COMMAND ----------
 
 rdd = sc.textFile('/FileStore/tables/sample_words2.txt')
