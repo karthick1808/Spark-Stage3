@@ -19,6 +19,9 @@ sc = SparkContext.getOrCreate(conf=conf)
 # COMMAND ----------
 
 rdd = sc.textFile('/FileStore/tables/sample_words2.txt')
+rdd.getNumPartitions()
+
+# COMMAND ----------
 rdd = rdd.repartition(5)
 rdd2 = rdd.flatMap(lambda x: x.split(' '))
 rdd3 = rdd2.map(lambda x: (x,1))
