@@ -1,3 +1,7 @@
+sc.defaultParallelism
+
+spark.conf.get("spark.sql.files.maxPartitionBytes")
+
 # Databricks notebook source
 from pyspark import SparkConf, SparkContext
 conf = SparkConf().setAppName("Partition")
