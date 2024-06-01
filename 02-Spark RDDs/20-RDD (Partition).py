@@ -39,6 +39,14 @@ rdd3.saveAsTextFile('/FileStore/tables/output/5partitionOutput')
 
 rdd = sc.textFile('/FileStore/tables/sample_words2.txt')
 rdd = rdd.repartition(5)
+
+# Coalesce
+# Coalesce function only reduces the number of partitions.
+# Coalesce doesn't require a full shuffle.
+# Coalesce combines few partitions or shuffles data only from few partitions thus avoiding full shuffle
+# Due to partition merge, it produces uneven size of partitions
+# Since full shuffle is avoided, coalesce is more performant than repartition.
+# COMMAND ----------
 rdd2 = rdd.flatMap(lambda x: x.split(' '))
 rdd3 = rdd2.map(lambda x: (x,1))
 rdd3 = rdd3.coalesce(3)
