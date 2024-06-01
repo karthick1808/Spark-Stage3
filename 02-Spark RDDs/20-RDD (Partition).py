@@ -1,3 +1,9 @@
+# The parameter sc.defaultParallelism determines the number of partitions when creating data within Spark.
+# Dafault value is 8 so it creates 8 partition by default.
+# • When reading data from external system, partitions are created based on parameter
+# spark.sql.files.maxPartitionBytes which is by default 128
+# MB
+
 sc.defaultParallelism
 
 spark.conf.get("spark.sql.files.maxPartitionBytes")
